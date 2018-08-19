@@ -6,10 +6,10 @@ $IP4FW -A INPUT -p tcp -m tcp --syn --dport 22 -m pknock --checkip --name KNOCKL
 $IP4FW -A INPUT -p udp -m udp --dport 1900 -m pknock --checkip --name KNOCKLIST -m state --state NEW -j ACCEPT
 
 [root@nat-fw(~/spoof)]> ./knock 10.47.47.105 10.47.47.107 47000 MYSTAGIC
-[*] Spoofing Source IP: 10.47.47.105
-[*] Knock Server IP: 10.47.47.107 port: 47000
-[*] Knock token: afd184cddc7372740912587e0d38be42f60298f2600a3759b6017755ad932c6b
-[*] Knock sent.
+ Spoofing Source IP: 10.47.47.105
+ Knock Server IP: 10.47.47.107 port: 47000
+ Knock token: afd184cddc7372740912587e0d38be42f60298f2600a3759b6017755ad932c6b
+ Knock sent.
 
 
 pknock module: https://github.com/tinti/xtables-addons/tree/master/extensions/pknock
